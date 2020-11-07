@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Billy's Coin Flip!</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./abi.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Billy's Coin Flip Dapp</h1>
+        <p class="lead">Heads you win, tails you lose! </p>
+      </div>
+    </div>
+    <div class="container">
+      <div>
+        <h2>Casino Details</h2>
+        <div>
+          Bank has <span id="bank_balance_output">0</span> ETH.
+        </div>
+        <div>
+          You have <span id="my_balance_output">0</span> ETH.
+        </div>
+        <div>
+          I wouldn't bet more than <span id="max_bet_output">0</span> ETH.
+        </div>
+        <div class="input-group mb-3 ">
+          <div class="input-group-prepend mb-3 ">
+              <span class="input-group-text">How much would you like to bet? </span>
+          </div>
+          <input type="number" class="form-control" id="bet_input" placeholder="e.g. 0.01" >
+        </div>
+        <div class=" mb-3">
+          <button type="button" id="place_bet_button" class="btn btn-primary">
+              <span class="spinner-border spinner-border-sm" id="flip_spinner" role="status" aria-hidden="true"></span>
+              <span class="sr-only">Flipping...</span>
+              Flip!
+            </button>
+            <button type="button" id="load_bank_button" class="btn btn-primary">
+              <span class="spinner-border spinner-border-sm" id="bank_spinner" role="status" aria-hidden="true"></span>
+              <span class="sr-only">Loading the bank...</span>
+            Click to load up the bank with 0.1 ETH
+            </button>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <span id="flip_result_output"></span>
+        </div>
+        <div>
+          <span id="win_output"></span>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
